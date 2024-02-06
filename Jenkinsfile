@@ -1,6 +1,6 @@
 node {
     stage('clone') {
-        git branch: ‘[브랜치명]’, credentialsId: ‘[credentials 아이디]’, url: ‘[github repository SSH url]’
+        git branch: 'master', credentialsId: 'github_jenkins', url: ‘https://github.com/DaeSeopJeong/hello-world’
     }
     stage('Change application.yml') {
         sh '''
