@@ -1,6 +1,10 @@
+String branchName = env.BRANCH_NAME
+String gitCredentials = "github_jenkins"
+String repoUrl = "https://github.com/DaeSeopJeong/hello-world.git"
+
 node {
     stage('clone') {
-        git branch: 'master', credentialsId: 'github_jenkins', url: ‘https://github.com/DaeSeopJeong/hello-world’
+        git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl
     }
     stage('Change application.yml') {
         sh '''
